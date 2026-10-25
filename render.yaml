@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: streamora
+    runtime: node
+    plan: free
+    buildCommand: ""
+    startCommand: npm start
+    envVars:
+      - key: TMDB_READ_ACCESS_TOKEN
+        sync: false

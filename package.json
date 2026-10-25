@@ -1,0 +1,12 @@
+{
+  "name": "streamora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "STREAMORA movie and series discovery with region-aware availability",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

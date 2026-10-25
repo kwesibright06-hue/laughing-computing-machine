@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#09090d">
+<title>STREAMORA — Find your next obsession</title>
+<style>
+:root{--bg:#09090d;--panel:#14141b;--panel2:#1c1c25;--text:#f7f7fa;--muted:#a3a3b2;--red:#e50914;--line:#2b2b35;--green:#55d6a0}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}.shell{min-height:100vh;overflow:hidden}.topbar{height:76px;display:flex;align-items:center;gap:34px;padding:0 5.3%;position:absolute;z-index:5;top:0;width:100%;background:linear-gradient(180deg,rgba(5,5,9,.94),transparent)}.brand{font-size:24px;letter-spacing:2px;font-weight:900;white-space:nowrap}.brand span{color:var(--red)}.nav{display:flex;gap:24px;color:#dddde5;font-size:14px}.nav a:hover,.nav a.active{color:#fff}.top-actions{margin-left:auto;display:flex;align-items:center;gap:18px}.searchbox{display:flex;align-items:center;gap:8px;border:1px solid #555563;background:#09090dcc;padding:9px 12px;border-radius:8px;width:220px}.searchbox input{background:none;border:0;outline:0;color:white;width:100%;min-width:0}.avatar{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#ed1b2f,#7e1328);display:grid;place-items:center;font-weight:800}.hero{min-height:610px;display:flex;align-items:flex-end;padding:145px 5.3% 75px;position:relative;background:linear-gradient(90deg,#09090d 0%,rgba(9,9,13,.93) 27%,rgba(9,9,13,.47) 58%,rgba(9,9,13,.08) 100%),linear-gradient(0deg,#09090d 0%,transparent 48%),url('https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=2000&q=85') center 38%/cover}.hero-content{max-width:540px;position:relative;z-index:1}.eyebrow{color:#ff6470;font-size:12px;font-weight:800;letter-spacing:2.4px;text-transform:uppercase;display:flex;align-items:center;gap:9px}.dot{width:7px;height:7px;background:var(--red);border-radius:50%;display:inline-block}.hero h1{font-size:clamp(42px,5.3vw,72px);line-height:.98;letter-spacing:-2.5px;margin:16px 0 17px}.hero p{color:#d2d2dc;max-width:480px;line-height:1.7;font-size:15px}.meta{display:flex;align-items:center;gap:12px;flex-wrap:wrap;color:#d5d5dd;font-size:13px;margin:18px 0 23px}.match{color:#5ce2a5;font-weight:800}.pill{border:1px solid #ffffff45;border-radius:4px;padding:2px 7px;font-size:11px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{border:0;border-radius:7px;padding:12px 18px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:transform .18s,background .18s}.btn:hover{transform:translateY(-1px)}.primary{background:#f5f5f7;color:#111}.primary:hover{background:white}.secondary{background:#ffffff24;color:white;backdrop-filter:blur(8px)}.secondary:hover{background:#ffffff35}.content{padding:0 5.3% 70px;margin-top:-12px;position:relative;z-index:2}.section{margin:25px 0 35px}.section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}.section h2{font-size:20px;letter-spacing:-.3px;margin:0}.section-sub{color:var(--muted);font-size:12px;margin-top:4px}.see-all{color:#c8c8d1;font-size:13px;background:none;border:0}.see-all:hover{color:white}.filters{display:flex;gap:9px;overflow:auto;padding:2px 0 7px;scrollbar-width:none}.filter{white-space:nowrap;padding:8px 15px;border-radius:100px;border:1px solid #34343f;color:#c9c9d3;background:#15151c;font-size:13px}.filter.selected,.filter:hover{background:#fff;color:#111;border-color:white}.provider-row{display:flex;gap:10px;flex-wrap:wrap}.provider{display:flex;align-items:center;gap:8px;border:1px solid #30303a;background:#14141b;color:#dddde5;padding:9px 13px;border-radius:8px;font-size:13px}.provider.selected{border-color:var(--red);box-shadow:0 0 0 1px #e5091430}.provider-mark{width:22px;height:22px;border-radius:5px;display:grid;place-items:center;font-size:11px;font-weight:900;color:white}.netflix{background:#e50914}.prime{background:#168bce}.disney{background:#142e83}.hulu{background:#1c9c56}.youtube{background:#ff1d1d}.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}.movie-card{min-width:0;position:relative;cursor:pointer;transition:transform .2s}.movie-card:hover{transform:translateY(-5px)}.poster{position:relative;aspect-ratio:2/3;border-radius:10px;overflow:hidden;background:#252530;border:1px solid #ffffff10}.poster img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}.movie-card:hover img{transform:scale(1.045)}.poster:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.76));pointer-events:none}.poster-top{position:absolute;z-index:1;left:9px;right:9px;top:9px;display:flex;justify-content:space-between;align-items:center}.tag{background:#e50914;color:white;border-radius:4px;padding:4px 6px;font-size:9px;letter-spacing:.4px;font-weight:900}.save{background:#101016c9;color:white;border:1px solid #ffffff55;width:31px;height:31px;border-radius:50%;display:grid;place-items:center;font-size:18px;line-height:1}.save.saved{background:var(--red);border-color:var(--red)}.poster-bottom{position:absolute;z-index:1;bottom:10px;left:10px;right:10px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}.provider-mini{background:#101016e8;border:1px solid #ffffff35;padding:4px 6px;border-radius:4px;font-size:9px;font-weight:800}.movie-info{padding:10px 2px}.movie-title{font-weight:750;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.movie-meta{color:var(--muted);font-size:12px;margin-top:4px;display:flex;gap:7px;align-items:center}.stars{color:#ffd166}.empty{padding:38px;text-align:center;border:1px dashed #383844;border-radius:12px;color:var(--muted);grid-column:1/-1}.footer{border-top:1px solid var(--line);padding:25px 5.3%;display:flex;justify-content:space-between;gap:20px;color:#858592;font-size:12px}.footer strong{color:#c9c9d2}.mobile-nav{display:none}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;transition:.25s;background:#f4f4f5;color:#111;padding:12px 18px;border-radius:10px;z-index:20;font-weight:750;box-shadow:0 8px 30px #0008}.toast.show{opacity:1;transform:translate(-50%,0)}.modal-backdrop{display:none;position:fixed;inset:0;background:#000b;z-index:30;align-items:center;justify-content:center;padding:20px}.modal-backdrop.open{display:flex}.modal{background:#17171f;border:1px solid #353540;border-radius:16px;overflow:hidden;max-width:740px;width:100%;display:grid;grid-template-columns:260px 1fr;position:relative;box-shadow:0 30px 100px #000b}.modal img{height:100%;min-height:360px;width:100%;object-fit:cover}.modal-copy{padding:30px}.modal-copy h2{font-size:30px;margin:10px 0}.modal-copy p{color:#c4c4ce;line-height:1.7}.close{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;border:0;background:#09090dcc;color:white;font-size:20px}.modal-providers{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}.provider-label{padding:8px 10px;background:#272731;border:1px solid #444450;border-radius:7px;font-size:12px}.note{color:#898995;font-size:11px;line-height:1.6;margin-top:18px}
+@media(max-width:950px){.topbar{padding:0 4%}.nav{gap:14px}.searchbox{width:175px}.hero{padding-left:4%;min-height:580px}.content{padding-left:4%;padding-right:4%}.cards{grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}}
+@media(max-width:650px){.topbar{height:65px;gap:12px;padding:0 18px;background:#09090de8;position:absolute}.brand{font-size:20px;letter-spacing:1.5px}.nav{display:none}.top-actions{gap:10px}.searchbox{width:38px;padding:9px;justify-content:center;border-color:transparent;background:transparent}.searchbox input{display:none}.searchbox.open{position:absolute;right:58px;left:15px;width:auto;background:#14141b;border-color:#555563}.searchbox.open input{display:block}.avatar{width:31px;height:31px}.hero{min-height:570px;padding:160px 20px 65px;background-position:58% center;background-image:linear-gradient(90deg,rgba(9,9,13,.91),rgba(9,9,13,.48)),linear-gradient(0deg,#09090d 0%,transparent 65%),url('https://images.unsplash.com/photo-1535016120720-40c646be5580?auto=format&fit=crop&w=1100&q=80')}.hero h1{font-size:48px;letter-spacing:-1.8px}.hero p{font-size:14px}.content{padding:0 18px 85px;margin-top:-8px}.section{margin:24px 0 30px}.section h2{font-size:18px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 12px}.movie-title{font-size:13px}.poster{border-radius:8px}.provider-row{flex-wrap:nowrap;overflow:auto;padding-bottom:5px}.provider{flex-shrink:0}.mobile-nav{position:fixed;z-index:10;bottom:0;left:0;right:0;background:#111117f5;backdrop-filter:blur(15px);border-top:1px solid #30303a;display:flex;justify-content:space-around;padding:10px 8px max(10px,env(safe-area-inset-bottom));}.mobile-nav button{background:none;border:0;color:#9999a7;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:4px}.mobile-nav button b{font-size:20px;font-weight:500}.mobile-nav button.active{color:white}.footer{padding:20px;flex-direction:column}.modal{grid-template-columns:1fr;max-height:90vh;overflow:auto}.modal img{height:210px;min-height:210px}.modal-copy{padding:22px}.modal-copy h2{font-size:24px}.hero .actions .btn{padding:11px 14px}.meta{gap:8px}.modal-backdrop{padding:12px}}
+</style>
+</head>
+<body><div class="shell">
+<header class="topbar">
+<a class="brand" href="#" aria-label="Streamora home">STREAM<span>O</span>RA</a>
+<nav class="nav" aria-label="Main navigation"><a href="#home" class="active" data-nav="home">Home</a><a href="#browse" data-nav="browse">Discover</a><a href="#trending" data-nav="trending">Trending</a><a href="#watchlist" data-nav="watchlist">My List</a></nav>
+<div class="top-actions"><label class="searchbox" id="searchBox"><span>⌕</span><input id="searchInput" type="search" placeholder="Titles, genres, people…" aria-label="Search titles"></label><div class="avatar" title="Guest profile">S</div></div>
+</header>
+<section class="hero" id="home"><div class="hero-content">
+<div class="eyebrow"><span class="dot"></span> YOUR NEXT OBSESSION STARTS HERE</div>
+<h1>One world.<br>Endless stories.</h1>
+<p>Stop searching everywhere. Discover your next favourite movie or series and find where it’s streaming — all in one place.</p>
+<div class="meta"><span class="match">98% match</span><span>2025</span><span>2h 08m</span><span class="pill">4K UHD</span><span class="pill">Adventure</span></div>
+<div class="actions"><button class="btn primary" id="heroExplore">▶ &nbsp; Explore titles</button><button class="btn secondary" id="heroDetails">ⓘ &nbsp; How it works</button></div>
+</div></section>
+<main class="content">
+<section class="section" id="providers"><div class="section-head"><div><h2>Where do you watch?</h2><div class="section-sub">Choose your services to personalise discovery</div></div></div>
+<div class="provider-row" id="providerFilters">
+<button class="provider selected" data-provider="All"><span class="provider-mark" style="background:#34343e">✦</span>All services</button>
+<button class="provider" data-provider="Netflix"><span class="provider-mark netflix">N</span>Netflix</button>
+<button class="provider" data-provider="Prime Video"><span class="provider-mark prime">▶</span>Prime Video</button>
+<button class="provider" data-provider="Disney+"><span class="provider-mark disney">D+</span>Disney+</button>
+<button class="provider" data-provider="Hulu"><span class="provider-mark hulu">h</span>Hulu</button>
+<button class="provider" data-provider="YouTube"><span class="provider-mark youtube">▶</span>YouTube</button>
+</div></section>
+<section class="section" id="browse"><div class="section-head"><div><h2>Find your vibe</h2><div class="section-sub">A little mood goes a long way</div></div></div>
+<div class="filters" id="genreFilters"><button class="filter selected" data-genre="All">✨ For you</button><button class="filter" data-genre="Action">💥 Action</button><button class="filter" data-genre="Drama">🎭 Drama</button><button class="filter" data-genre="Sci-Fi">🚀 Sci-Fi</button><button class="filter" data-genre="Thriller">🕵️ Thriller</button><button class="filter" data-genre="Animation">🎨 Animation</button><button class="filter" data-genre="Documentary">🌍 Documentary</button><button class="filter" data-genre="Comedy">😂 Comedy</button></div></section>
+<section class="section" id="trending"><div class="section-head"><div><h2 id="resultsTitle">Trending this week</h2><div class="section-sub" id="resultsSub">The titles everyone’s talking about</div></div><button class="see-all" id="clearFilters">Reset filters ↗</button></div><div class="cards" id="movieGrid"></div></section>
+<section class="section" id="watchlist"><div class="section-head"><div><h2>My List <span style="color:#858592;font-size:14px" id="watchCount">(0)</span></h2><div class="section-sub">Keep your next watch close</div></div></div><div class="cards" id="watchGrid"></div></section>
+<section class="section"><div class="section-head"><div><h2>Made for movie nights</h2><div class="section-sub">Less scrolling. More watching.</div></div></div><div style="border:1px solid #292933;border-radius:14px;padding:23px;background:radial-gradient(ellipse at 100% 0%,#45151e 0%,transparent 45%),#14141b;display:flex;align-items:center;justify-content:space-between;gap:20px"><div><div class="eyebrow">THE STREAMORA PROMISE</div><h2 style="font-size:23px;margin:8px 0">Your time is for the story.</h2><p style="color:#b7b7c2;margin:0;max-width:460px;font-size:13px;line-height:1.7">Compare streaming options, save what catches your eye, and spend less time deciding what to watch.</p></div><div style="font-size:52px">🍿</div></div></section>
+</main>
+<footer class="footer"><div><strong>STREAMORA</strong> · All your stories, one destination.</div><div>Discovery demo · Availability varies by country and subscription.</div></footer>
+<nav class="mobile-nav" aria-label="Mobile navigation"><button class="active" data-scroll="home"><b>⌂</b>Home</button><button data-scroll="browse"><b>⌕</b>Discover</button><button data-scroll="trending"><b>▦</b>Trending</button><button data-scroll="watchlist"><b>♡</b>My List</button></nav>
+<div class="toast" id="toast" role="status"></div>
+<div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><button class="close" id="closeModal" aria-label="Close">×</button><img id="modalImage" alt=""><div class="modal-copy"><div class="eyebrow" id="modalEyebrow">STREAMORA PICK</div><h2 id="modalTitle">Title</h2><div class="meta" id="modalMeta"></div><p id="modalDescription"></p><strong>Available on (demo data)</strong><div class="modal-providers" id="modalProviders"></div><button class="btn primary" id="modalSave">＋ Add to My List</button><div class="note">Provider availability is illustrative in this prototype, not a live availability check. Connect a licensed catalog/availability API before launch.</div></div></div></div>
+</div>
+<script>
+let movies = [];
+const $ = s => document.querySelector(s);
+let activeGenre = "All", activeProvider = "All", query = "", showWatchOnly = false;
+let watchlist = new Set(JSON.parse(localStorage.getItem("streamora-watchlist") || "[]"));
+let currentRegion = localStorage.getItem("streamora-region") || "GH";
+const genreMap = {
+  28:"Action",12:"Adventure",16:"Animation",35:"Comedy",80:"Crime",99:"Documentary",
+  18:"Drama",10751:"Family",14:"Fantasy",36:"History",27:"Horror",10402:"Music",
+  9648:"Mystery",10749:"Romance",878:"Sci-Fi",10770:"TV Movie",53:"Thriller",
+  10752:"War",37:"Western",10759:"Action",10762:"Family",10763:"News",10764:"Reality",
+  10765:"Sci-Fi",10766:"Drama",10767:"Talk",10768:"War",10749:"Romance"
+};
+function escapeHtml(s){return String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function normalise(item){
+  return {
+    id: item.id, mediaType: item.media_type || item.mediaType || "movie",
+    title: item.title || item.name || "Untitled",
+    year: (item.release_date || item.first_air_date || "").slice(0,4) || "—",
+    rating: Number(item.vote_average || 0).toFixed(1),
+    duration: item.media_type === "tv" ? "Series" : "Movie",
+    genres: (item.genre_ids || []).map(id => genreMap[id]).filter(Boolean),
+    providers: item.providers || [],
+    tag: item.media_type === "tv" ? "SERIES" : "MOVIE",
+    image: item.poster_path ? "https://image.tmdb.org/t/p/w500" + item.poster_path : "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80",
+    backdrop: item.backdrop_path ? "https://image.tmdb.org/t/p/w1280" + item.backdrop_path : "",
+    description: item.overview || "Open this title to explore details and check streaming availability.",
+    label: item.media_type === "tv" ? "Series to explore" : "Movie to explore"
+  };
+}
+function filtered(){
+  return movies.filter(m =>
+    (activeGenre === "All" || m.genres.includes(activeGenre)) &&
+    (activeProvider === "All" || m.providers.includes(activeProvider)) &&
+    (!query || (m.title+" "+m.genres.join(" ")+" "+m.description).toLowerCase().includes(query.toLowerCase())) &&
+    (!showWatchOnly || watchlist.has(m.id+"-"+m.mediaType))
+  );
+}
+function card(m){
+  const key = m.id+"-"+m.mediaType, saved = watchlist.has(key);
+  return `<article class="movie-card" data-id="${m.id}" data-type="${m.mediaType}">
+    <div class="poster"><img loading="lazy" src="${m.image}" alt="${escapeHtml(m.title)} poster" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80'">
+    <div class="poster-top"><span class="tag">${m.tag}</span><button class="save ${saved?"saved":""}" data-save="${key}" aria-label="${saved?"Remove from":"Add to"} My List">${saved?"✓":"＋"}</button></div>
+    <div class="poster-bottom">${m.providers.slice(0,2).map(p=>`<span class="provider-mini">${escapeHtml(p)}</span>`).join("")}</div></div>
+    <div class="movie-info"><div class="movie-title">${escapeHtml(m.title)}</div><div class="movie-meta"><span class="stars">★ ${m.rating}</span><span>·</span><span>${m.year}</span><span>·</span><span>${escapeHtml(m.genres[0] || (m.mediaType==="tv"?"Series":"Movie"))}</span></div></div></article>`;
+}
+function render(){
+  const list=filtered();
+  $("#movieGrid").innerHTML=list.length?list.map(card).join(""):`<div class="empty">No titles match those filters. Try another genre or search.</div>`;
+  const saved=movies.filter(m=>watchlist.has(m.id+"-"+m.mediaType));
+  $("#watchGrid").innerHTML=saved.length?saved.map(card).join(""):`<div class="empty">Your list is waiting for its first story. Tap ＋ on any title to save it.</div>`;
+  $("#watchCount").textContent=`(${watchlist.size})`;
+  $("#resultsTitle").textContent=query?`Search results for “${query}”`:activeGenre!=="All"?`${activeGenre} picks`:activeProvider!=="All"?`On ${activeProvider}`:"Trending movies & series";
+  $("#resultsSub").textContent=`${list.length} titles · Availability region: ${currentRegion}`;
+  $("#providerFilters").querySelectorAll("[data-provider]").forEach(b=>b.classList.toggle("selected",b.dataset.provider===activeProvider));
+  $("#genreFilters").querySelectorAll("[data-genre]").forEach(b=>b.classList.toggle("selected",b.dataset.genre===activeGenre));
+}
+function toast(msg){const t=$("#toast");if(!t)return;t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2500)}
+function toggleSave(key){
+  if(watchlist.has(key)){watchlist.delete(key);toast("Removed from My List")}else{watchlist.add(key);toast("Added to My List ♡")}
+  localStorage.setItem("streamora-watchlist",JSON.stringify([...watchlist]));render();
+  if($("#modalBackdrop").classList.contains("open")) updateModalSave(key);
+}
+function updateModalSave(key){const b=$("#modalSave");b.textContent=watchlist.has(key)?"✓ Saved to My List":"＋ Add to My List";b.dataset.key=key}
+async function openModal(id,type){
+  const m=movies.find(x=>x.id===Number(id)&&x.mediaType===type);if(!m)return;
+  $("#modalImage").src=m.backdrop||m.image;$("#modalImage").alt=m.title;$("#modalEyebrow").textContent=(m.mediaType==="tv"?"SERIES":"MOVIE")+" · "+currentRegion;
+  $("#modalTitle").textContent=m.title;
+  $("#modalMeta").innerHTML=`<span class="match">★ ${m.rating}</span><span>${m.year}</span><span class="pill">${m.genres.join(" · ")||"Popular"}</span>`;
+  $("#modalDescription").textContent=m.description;
+  $("#modalProviders").innerHTML='<span class="provider-label">Checking official availability…</span>';
+  const key=m.id+"-"+m.mediaType;updateModalSave(key);
+  $("#modalBackdrop").classList.add("open");document.body.style.overflow="hidden";
+  try{
+    const r=await fetch(`/api/providers?type=${encodeURIComponent(m.mediaType)}&id=${m.id}&region=${currentRegion}`);
+    const data=await r.json();
+    if(!r.ok) throw new Error(data.error||"Could not check availability");
+    if(data.providers?.length){
+      $("#modalProviders").innerHTML=data.providers.map(p=>`<a class="provider-label" href="${escapeHtml(p.link||"https://www.themoviedb.org/")}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.name)} ↗</a>`).join("");
+    } else {
+      $("#modalProviders").innerHTML='<span class="provider-label">No streaming offer returned for this region. Availability may vary.</span>';
+    }
+  }catch(e){$("#modalProviders").innerHTML='<span class="provider-label">Availability could not be checked. Please try again.</span>'}
+}
+function closeModal(){$("#modalBackdrop").classList.remove("open");document.body.style.overflow=""}
+async function loadCatalog(){
+  $("#movieGrid").innerHTML='<div class="empty">Loading current movies and series…</div>';
+  try{
+    const r=await fetch(`/api/catalog?region=${currentRegion}`);
+    const data=await r.json();
+    if(!r.ok)throw new Error(data.error||"Catalog could not load");
+    movies=(data.results||[]).map(normalise);
+    render();
+    if(data.warning)toast(data.warning);
+  }catch(e){
+    $("#movieGrid").innerHTML=`<div class="empty">Live catalog isn't connected yet. Add your TMDB API read access token in Render environment variables, then redeploy. (${escapeHtml(e.message)})</div>`;
+  }
+}
+$("#movieGrid").addEventListener("click",e=>{const save=e.target.closest("[data-save]");if(save){e.stopPropagation();toggleSave(save.dataset.save);return}const c=e.target.closest("[data-id]");if(c)openModal(c.dataset.id,c.dataset.type)});
+$("#watchGrid").addEventListener("click",e=>{const save=e.target.closest("[data-save]");if(save){e.stopPropagation();toggleSave(save.dataset.save);return}const c=e.target.closest("[data-id]");if(c)openModal(c.dataset.id,c.dataset.type)});
+$("#providerFilters").addEventListener("click",e=>{const b=e.target.closest("[data-provider]");if(b){activeProvider=b.dataset.provider;showWatchOnly=false;render()}});
+$("#genreFilters").addEventListener("click",e=>{const b=e.target.closest("[data-genre]");if(b){activeGenre=b.dataset.genre;showWatchOnly=false;render()}});
+$("#searchInput").addEventListener("input",async e=>{
+  query=e.target.value.trim();showWatchOnly=false;
+  if(query.length>=2){
+    try{const r=await fetch(`/api/search?q=${encodeURIComponent(query)}&region=${currentRegion}`);const d=await r.json();if(r.ok){movies=d.results.map(normalise);render();return}}catch(_){}
+  }
+  if(!query)loadCatalog();else render();
+});
+$("#searchInput").addEventListener("focus",()=>$("#searchBox").classList.add("open"));
+$("#searchInput").addEventListener("blur",()=>{if(!$("#searchInput").value)$("#searchBox").classList.remove("open")});
+$("#clearFilters").addEventListener("click",()=>{activeGenre="All";activeProvider="All";query="";showWatchOnly=false;$("#searchInput").value="";$("#searchBox").classList.remove("open");loadCatalog()});
+$("#heroExplore").addEventListener("click",()=>$("#browse").scrollIntoView({behavior:"smooth"}));
+$("#heroDetails").addEventListener("click",()=>{toast("Open any title to check official streaming availability.");$("#providers").scrollIntoView({behavior:"smooth"})});
+$("#closeModal").addEventListener("click",closeModal);$("#modalBackdrop").addEventListener("click",e=>{if(e.target===$("#modalBackdrop"))closeModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal()});
+$("#modalSave").addEventListener("click",e=>toggleSave(e.currentTarget.dataset.key));
+document.querySelectorAll("[data-scroll]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-scroll]").forEach(x=>x.classList.toggle("active",x===b));document.getElementById(b.dataset.scroll).scrollIntoView({behavior:"smooth"})}));
+document.querySelectorAll("[data-nav]").forEach(a=>a.addEventListener("click",()=>{document.querySelectorAll("[data-nav]").forEach(x=>x.classList.toggle("active",x===a))}));
+loadCatalog();
+</script>
+</body></html>
